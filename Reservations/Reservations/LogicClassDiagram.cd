@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Reservations.Logic.Product">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reservations.Logic.Reservation">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAACAAAAAIAAAAQAAAAA=</HashCode>
+      <FileName>Logic\Reservation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reservations.Logic.ReservationCreator">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAABAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\ReservationCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reservations.Logic.Shop">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Shop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reservations.Logic.ShopNetwork">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Logic\ShopNetwork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

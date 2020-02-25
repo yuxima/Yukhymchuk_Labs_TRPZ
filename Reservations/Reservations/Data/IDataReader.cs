@@ -4,11 +4,8 @@ using System.Text;
 
 namespace Reservations.Data
 {
-    class DataFromFileLoader:IDataLoader
+    interface IDataReader
     {
-        void IDataLoader.LoadData()
-        {
-
-        }
+        void ReadData(string path) { }
     }
 }
