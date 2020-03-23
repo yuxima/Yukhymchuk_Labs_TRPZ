@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Reservations.Data
 {
-    interface IDataReader
+    interface IDataContainer<T>
     {
-        void ReadData(string path) { }
+        IDataController<T> GetData();
     }
 }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Reservations.Data
 {
-    interface IDataWriter
+    interface IDataController<T>
     {
-        void WriteData(string path, object obj) { }
-        
+        void SetInformation(T obj);
+        T GetInformation();
     }
 }
