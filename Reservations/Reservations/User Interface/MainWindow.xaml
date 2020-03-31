@@ -8,14 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label  x:Name="lblNumbOfReservation" Content="Enter the number of reservation:" HorizontalAlignment="Left" Margin="194,59,0,0" VerticalAlignment="Top"/>
-        <TextBox  x:Name="txbNumberOfReservation" Margin="403,66,277,353" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Text="{Binding NumberOfReservation, UpdateSourceTrigger=PropertyChanged}"/>
         <ComboBox x:Name="cmboxChooseProduct" HorizontalAlignment="Left" Margin="147,141,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path = Products}" SelectedValue="{Binding Path = Product}"/>
         <ComboBox x:Name="cmboxChooseShop" HorizontalAlignment="Left" Margin="597,141,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Path = Shops}" SelectedValue="{Binding Path = Shop}"/>
         <Label x:Name="lblChooseProduct" Content="Choose product:" HorizontalAlignment="Left" Margin="45,140,0,0" VerticalAlignment="Top"/>
         <Label  x:Name="lblChooseShop" Content="Choose shop:" HorizontalAlignment="Left" Margin="495,140,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnChooseProduct" Content="Choose Product" HorizontalAlignment="Left" Margin="159,307,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.757,-0.85" Command="{Binding GetReservationCommand}" Width="104"/>
+        <Button x:Name="btnChooseProduct" Content="Choose Product" HorizontalAlignment="Left" Margin="159,307,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.757,-0.85" Command="{Binding GetShops}" Width="104"/>
         <TextBox x:Name="txbNumberOfProducts" HorizontalAlignment="Left" Margin="352,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Text="{Binding NumberOfProducts, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="txbNumberOfReservation" Margin="402,65,332,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Text="{Binding NumberOfReservation, UpdateSourceTrigger=PropertyChanged}"/>
         <Label x:Name="lblNumberOfProducts" Content="Enter the number of products:" HorizontalAlignment="Left" Margin="300,113,0,0" VerticalAlignment="Top"/>
-        <Button Content="Make a reservation" HorizontalAlignment="Left" Margin="582,309,0,0" VerticalAlignment="Top"/>
+        <Button Content="Make a reservation" HorizontalAlignment="Left" Margin="582,309,0,0" VerticalAlignment="Top" Command="{Binding GetReservation}"/>
     </Grid>
 </Window>

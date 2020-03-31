@@ -42,8 +42,8 @@ namespace Reservations
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            base.OnStartup(e);
-            new MainWindow();
+            ViewModel viewModel = serviceProvider.GetService<ViewModel>();
+            new MainWindow { DataContext = viewModel };
             MainWindow.Show();
         }
     }

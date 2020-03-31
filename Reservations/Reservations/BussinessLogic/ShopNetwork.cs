@@ -32,10 +32,7 @@ namespace Reservations.BussinessLogic
                 {
                     shopsNames.Add(shop.Name);
                 }
-                else
-                {
-                    throw new Exception("Oops...");
-                }
+                
                     
             }
             return shopsNames;
@@ -49,10 +46,6 @@ namespace Reservations.BussinessLogic
                     return product;
 
                 }
-                else
-                {
-                    throw new Exception("There is no such a shop");
-                }
             }
             return null;
         }
@@ -64,10 +57,6 @@ namespace Reservations.BussinessLogic
                 if (nameOfShop == shop.Name)
                 {
                     return shop;
-                }
-                else
-                {
-                    throw new Exception("There is no such a shop");
                 }
             }
             return null;

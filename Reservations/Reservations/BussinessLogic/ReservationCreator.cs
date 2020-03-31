@@ -9,16 +9,15 @@ namespace Reservations.BussinessLogic
         Reservation myReservation;
         public void CreateReservation(Shop shop, Product product, int numberOfReservation, int numberOfProducts)
         {
+            myReservation = new Reservation(numberOfReservation, shop, product, numberOfProducts);
             if (IsAvailabile() == true)
             {
-                myReservation = new Reservation(numberOfReservation, shop, product, numberOfProducts);
                 ShopNetworkStorage.reservations.Add(myReservation);
             }
             else
             {
                 throw new Exception("Reservation isn't created");
             }
-            
         }
         public bool IsAvailabile()
         {

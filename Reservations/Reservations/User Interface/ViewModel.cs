@@ -44,6 +44,10 @@ namespace Reservations.User_Interface
         {
             get
             {
+                if (product == null)
+                {
+                    return null;
+                }
                 return model.GetShops(product);
             }
             set
@@ -66,13 +70,14 @@ namespace Reservations.User_Interface
         private int numberOfProducts;
         public int NumberOfProducts
         {
-            get
+            get 
             {
                 return numberOfProducts;
-            }
+            } 
+            
             set
             {
-                numberOfProducts = value;
+                numberOfProducts = Convert.ToInt32(value); ;
             }
         }
         private int numberOfReservation;
@@ -82,9 +87,10 @@ namespace Reservations.User_Interface
             {
                 return numberOfReservation;
             }
+
             set
             {
-                numberOfReservation = value;
+                numberOfReservation = Convert.ToInt32(value); ;
             }
         }
         private RelayCommand getReservationCommand;
@@ -98,7 +104,16 @@ namespace Reservations.User_Interface
                 }));
             }
         }
-
+        public RelayCommand GetShops
+        {
+            get
+            {
+                return getReservationCommand ?? (new RelayCommand(obj =>
+                {
+                    GetShopsCommand();
+                }));
+            }
+        }
         public void GetReservationCommand()
         {
             model.CreateReservation(numberOfReservation, product, numberOfProducts, shop);
@@ -107,7 +122,7 @@ namespace Reservations.User_Interface
         }
         public void GetShopsCommand()
         {
-
+            OnPropertyChanged("Shops");
         }
         
     }

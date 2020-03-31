@@ -18,17 +18,22 @@ namespace Reservations.BussinessLogic
             productsInShop.Add(product, 2);
             productsInShop.Add(product1, 3);
             Dictionary<Product, int> productsInShop1 = new Dictionary<Product, int>();
-            productsInShop.Add(product1, 4);
-            productsInShop.Add(product2, 1);
+            productsInShop1.Add(product1, 4);
+            productsInShop1.Add(product2, 1);
             Dictionary<Product, int> productsInShop2 = new Dictionary<Product, int>();
-            productsInShop.Add(product, 3);
-            productsInShop.Add(product2, 3);
+            productsInShop2.Add(product, 3);
+            productsInShop2.Add(product2, 3);
             Shop shop = new Shop("shop", productsInShop);
             Shop shop1 = new Shop("shop1", productsInShop1);
             Shop shop2 = new Shop("shop2", productsInShop2);
+            shop.ProductsInShop = productsInShop;
+            shop1.ProductsInShop = productsInShop1;
+            shop2.ProductsInShop = productsInShop2;
             ShopNetworkStorage.shops.Add(shop);
             ShopNetworkStorage.shops.Add(shop1);
             ShopNetworkStorage.shops.Add(shop2);
+            Reservation reservation = new Reservation(1, shop, product, 1);
+            ShopNetworkStorage.reservations.Add(reservation);
 
         }
 
