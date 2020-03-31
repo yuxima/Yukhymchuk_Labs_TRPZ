@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Logic
+namespace Reservations.BussinessLogic
 {
-    class Shop
+    public class Shop
     {
         public string Name { get; set; }
         public Dictionary<Product, int> ProductsInShop { get; set; }

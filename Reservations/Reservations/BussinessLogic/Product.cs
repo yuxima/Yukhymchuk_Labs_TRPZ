@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Logic
+namespace Reservations.BussinessLogic
 {
-    class Product
+    public class Product
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
+        public int AvailibleNumber { get; private set; }
 
         public Product(string _name)
         {
