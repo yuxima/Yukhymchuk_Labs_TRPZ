@@ -6,11 +6,15 @@ namespace Reservations.BussinessLogic
 {
     public class Reservation
     {
-        public Product Product { get; }
-        public int Number { get; private set; }
-        public DateTime DateOfReservation { get; private set; }
-        public DateTime EndTimeOfReservation { get; private set; }
-        public Shop Shop { get;  }
+        public int Id { get; set; }
+        public Product Product { get; set; }
+
+        public int ProductId { get; set; }
+        public int Number { get;  set; }
+        public DateTime DateOfReservation { get;  set; }
+        public DateTime EndTimeOfReservation { get;  set; }
+        public Shop Shop { get; set; }
+        public int ShopId { get; set; }
         public int NumberOfReservedProduct { get; set; }
 
         public Reservation(int _number, Shop _shop, Product _product, int _numbersOfProd)
@@ -19,6 +23,10 @@ namespace Reservations.BussinessLogic
             Product = _product;
             Shop = _shop;
             NumberOfReservedProduct = _numbersOfProd;
+        }
+        public Reservation()
+        {
+
         }
     }
 }

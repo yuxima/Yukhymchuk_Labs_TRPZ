@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Reservations.BussinessLogic;
 using Reservations.Data;
 using Reservations.User_Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace Reservations
 {
@@ -27,6 +28,9 @@ namespace Reservations
 
         private void ConfigureServices(IServiceCollection services)
         {
+            var connection = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
+
             services.AddTransient<IShopNetwork, ShopNetwork>();
             services.AddTransient<IDataController<ShopNetwork>, DataController<ShopNetwork>>();
             services.AddSingleton<MainWindow, MainWindow>();

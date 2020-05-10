@@ -6,13 +6,16 @@ namespace Reservations.BussinessLogic
 {
     public class Shop
     {
+        public int Id { get; set; }
         public string Name { get; set; }
-        public Dictionary<Product, int> ProductsInShop { get; set; }
 
-        public Shop(string _name, Dictionary<Product, int> _productsInShop)
+        public Shop(string _name)
         {
             Name = _name;
-            ProductsInShop = _productsInShop;
+        }
+        public Shop()
+        {
+
         }
     }
 }

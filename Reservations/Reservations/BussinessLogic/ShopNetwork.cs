@@ -37,7 +37,7 @@ namespace Reservations.BussinessLogic
             }
             return shopsNames;
         }
-        public Product GetProduct(string nameOfProduct)
+        private Product GetProduct(string nameOfProduct)
         {
             foreach (Product product in ShopNetworkStorage.products)
             {
@@ -49,7 +49,7 @@ namespace Reservations.BussinessLogic
             }
             return null;
         }
-        public Shop GetShop(string nameOfShop)
+        private Shop GetShop(string nameOfShop)
         {
 
             foreach (Shop shop in ShopNetworkStorage.shops)

@@ -6,12 +6,16 @@ namespace Reservations.BussinessLogic
 {
     public class Product
     {
-        public string Name { get; private set; }
-        public int AvailibleNumber { get; private set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
 
         public Product(string _name)
         {
             Name = _name;
+        }
+        public Product()
+        {
+
         }
     }
 }
