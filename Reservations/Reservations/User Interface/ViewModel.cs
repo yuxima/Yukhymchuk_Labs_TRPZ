@@ -116,9 +116,8 @@ namespace Reservations.User_Interface
         }
         public void GetReservationCommand()
         {
-            model.CreateReservation(numberOfReservation, product, numberOfProducts, shop);
+            model.CreateReservation(product, numberOfProducts, shop);
             OnPropertyChanged("NumberOfProducts");
-            OnPropertyChanged("NumberOfReservations");
         }
         public void GetShopsCommand()
         {

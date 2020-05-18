@@ -20,9 +20,9 @@ namespace Reservations.User_Interface
         {
             return shopNetwork.GetProducts();
         }
-        public void CreateReservation(int reservation, string product, int numberOfProducts, string shop)
+        public void CreateReservation( string product, int numberOfProducts, string shop)
         {
-            shopNetwork.CreateReservation(reservation, shop, product, numberOfProducts);
+            shopNetwork.CreateReservation(shop, product, numberOfProducts);
         }
     }
 }

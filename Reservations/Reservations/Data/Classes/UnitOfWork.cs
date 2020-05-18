@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Reservations.Data
 {
-    class UnitOfWork
+    class UnitOfWork:IUnitOfWork
     {
         private readonly ApplicationContext context;
         private IProductRepository productRepository;

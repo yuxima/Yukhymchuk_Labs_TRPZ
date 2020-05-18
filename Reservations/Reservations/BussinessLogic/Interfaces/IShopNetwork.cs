@@ -6,9 +6,10 @@ namespace Reservations.BussinessLogic
 {
     interface IShopNetwork
     {
-        void CreateReservation(int reservation, string shop, string product, int countOfProducts);
+        void CreateReservation(string shop, string product, int countOfProducts);
         List<string> GetShops(string nameOfProduct);
         List<string> GetProducts();
+
 
     }
 }

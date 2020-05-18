@@ -10,6 +10,9 @@ using Reservations.BussinessLogic;
 using Reservations.Data;
 using Reservations.User_Interface;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using Reservations.BussinessLogic.Interfaces;
+using Reservations.BussinessLogic.Services;
 
 namespace Reservations
 {
@@ -28,7 +31,8 @@ namespace Reservations
 
         private void ConfigureServices(IServiceCollection services)
         {
-            var connection = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            //var connection = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            var connection = @"data source=(localdb)\MSSQLLocalDB;Initial Catalog=reservation;Integrated Security=True;";
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
 
             services.AddTransient<IShopNetwork, ShopNetwork>();
@@ -38,6 +42,12 @@ namespace Reservations
             services.AddTransient<ViewModel, ViewModel>();
             services.AddTransient<DataLoader, DataLoader>();
             services.AddTransient<ReservationCreator, ReservationCreator>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IShopService, ShopService>();
+            services.AddScoped<IProductInShopService, ProductInShopService>();
+            services.AddScoped<IReservationService, ReservationService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddSingleton(new MapperConfiguration(conf => conf.AddProfile(new AutoMapperProfile())).CreateMapper());
         }
         private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {

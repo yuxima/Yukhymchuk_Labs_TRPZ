@@ -1,12 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Reservations.Data.Entities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Reservations.Data.Repositories
 {
-    class ProductInShopRepository:IProductInShopRepository
+    class ProductInShopRepository : IProductInShopRepository
     {
         private DbSet<ProductInShopEntity> _context;
         public ProductInShopRepository(ApplicationContext context)
@@ -21,7 +19,8 @@ namespace Reservations.Data.Repositories
 
         public IEnumerable<ProductInShopEntity> GetAll()
         {
-            return _context;
+            return _context.Include(p => p.Product)
+                           .Include(s => s.Shop).AsNoTracking();
         }
 
         public ProductInShopEntity GetById(int Id)
