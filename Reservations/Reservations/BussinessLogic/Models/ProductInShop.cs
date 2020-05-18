@@ -7,16 +7,16 @@ namespace Reservations.BussinessLogic
     class ProductInShop
     {
         public int Id { get; set; }
-        public int IdShop { get; set; }
-        public int IdProduct { get; set; }
+        public int ShopId { get; set; }
+        public int ProductId { get; set; }
         public int Price { get; set; }
         public int Count { get; set; }
         public Shop Shop { get; set; }
         public Product Product { get; set; }
-        public ProductInShop(int idShop, int idProduct, int price, int count, Shop shop, Product product)
+        public ProductInShop(int shopId, int productId, int price, int count, Shop shop, Product product)
         {
-            IdShop = idShop;
-            IdProduct = idProduct;
+            ShopId = shopId;
+            ProductId = productId;
             Shop = shop;
             Product = product;
             Price = price;

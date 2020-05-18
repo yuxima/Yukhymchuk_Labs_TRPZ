@@ -11,7 +11,7 @@ namespace Reservations.BussinessLogic
         public AutoMapperProfile()
         {
             CreateMap<ProductEntity, Product>().ReverseMap();
-            CreateMap<ProductInShopEntity, ProductEntity>().ReverseMap();
+            CreateMap<ProductInShopEntity, ProductInShop>().ReverseMap();
             CreateMap<ShopEntity, Shop>().ReverseMap();
             CreateMap<ReservationEntity, Reservation>().ReverseMap();
         }

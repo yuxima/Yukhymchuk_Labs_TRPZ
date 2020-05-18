@@ -20,7 +20,8 @@ namespace Reservations.Data.Repositories
         public IEnumerable<ProductInShopEntity> GetAll()
         {
             return _context.Include(p => p.Product)
-                           .Include(s => s.Shop).AsNoTracking();
+                           .Include(s => s.Shop)
+                           .AsNoTracking();
         }
 
         public ProductInShopEntity GetById(int Id)

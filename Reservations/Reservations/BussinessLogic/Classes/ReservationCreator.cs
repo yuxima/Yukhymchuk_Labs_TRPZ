@@ -19,7 +19,7 @@ namespace Reservations.BussinessLogic
         {
             if (IsAvailabile(product, numberOfProducts) == true)
             {
-                _reservationService.CreateReservation(shop, product, numberOfProducts);
+                _reservationService.CreateReservation(shop.Id, product.Id, numberOfProducts);
             }
             else
             {

@@ -18,7 +18,7 @@ namespace Reservations.BussinessLogic.Services
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        public void CreateReservation(Shop shop, Product product, int numberOfProducts)
+        public void CreateReservation(int shop, int product, int numberOfProducts)
         {
             Reservation myReservation = new Reservation(shop, product, numberOfProducts);
             var reserve = _mapper.Map<ReservationEntity>(myReservation);

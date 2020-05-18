@@ -21,7 +21,7 @@ namespace Reservations.Data.Repositories
 
         public IEnumerable<ShopEntity> GetAll()
         {
-            return _context;
+            return _context.AsNoTracking();
         }
 
         public ShopEntity GetById(int Id)

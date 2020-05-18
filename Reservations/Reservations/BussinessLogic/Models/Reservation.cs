@@ -17,10 +17,10 @@ namespace Reservations.BussinessLogic
         public int ShopId { get; set; }
         public int NumberOfReservedProduct { get; set; }
 
-        public Reservation( Shop _shop, Product _product, int _numbersOfProd)
+        public Reservation( int shopId, int productId, int _numbersOfProd)
         {
-            Product = _product;
-            Shop = _shop;
+            ProductId = productId;
+            ShopId = shopId;
             NumberOfReservedProduct = _numbersOfProd;
         }
         public Reservation()

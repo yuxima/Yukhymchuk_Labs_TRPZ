@@ -6,6 +6,6 @@ namespace Reservations.BussinessLogic.Interfaces
 {
     interface IReservationService
     {
-        void CreateReservation(Shop shop, Product product, int numberOfProducts);
+        void CreateReservation(int Idshop, int Idproduct, int numberOfProducts);
     }
 }

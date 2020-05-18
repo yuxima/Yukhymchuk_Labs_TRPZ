@@ -45,24 +45,24 @@ namespace Reservations.Data
             {
                 Id = 1,
                 Count = 3,
-                IdProduct = laptop.Id,
-                IdShop = rozetka.Id,
+                ProductId = laptop.Id,
+                ShopId = rozetka.Id,
                 Price = 23
             };
             var laptopInProm = new ProductInShopEntity
             {
                 Id = 2,
                 Count = 1,
-                IdShop = prom.Id,
-                IdProduct = laptop.Id,
+                ShopId = prom.Id,
+                ProductId = laptop.Id,
                 Price = 17
             };
             var carrotInRozetka = new ProductInShopEntity
             {
                 Id = 3,
                 Count = 4,
-                IdProduct = carrot.Id,
-                IdShop = rozetka.Id,
+                ProductId = carrot.Id,
+                ShopId = rozetka.Id,
                 Price = 2
             };
             modelBuilder.Entity<ProductEntity>().HasData(carrot, laptop);
