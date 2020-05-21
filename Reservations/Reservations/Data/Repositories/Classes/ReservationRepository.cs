@@ -1,42 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Reservations.Data.Entities;
+using Reservations.Data.Repositories.Classes;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Reservations.Data.Repositories
 {
-    class ReservationRepository:IReservationRepository
+    class ReservationRepository:Repository<ReservationEntity, int>,IReservationRepository
     {
-        private DbSet<ReservationEntity> _context;
         public ReservationRepository(ApplicationContext context)
+            :base(context)
         {
-            _context = context.Set<ReservationEntity>();
-        }
-        public void DeleteById(int Id)
-        {
-            ReservationEntity reservation = _context.Find(Id);
-            _context.Remove(reservation);
-        }
-
-        public IEnumerable<ReservationEntity> GetAll()
-        {
-            return _context.AsNoTracking();
-        }
-
-        public ReservationEntity GetById(int Id)
-        {
-            return _context.Find(Id);
-        }
-
-        public void Insert(ReservationEntity entity)
-        {
-            _context.Add(entity);
-        }
-
-        public void Update(ReservationEntity entity)
-        {
-            _context.Update(entity);
+            
         }
     }
 }

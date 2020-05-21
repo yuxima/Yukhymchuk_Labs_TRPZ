@@ -31,8 +31,7 @@ namespace Reservations
 
         private void ConfigureServices(IServiceCollection services)
         {
-            //var connection = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
-            var connection = @"data source=(localdb)\MSSQLLocalDB;Initial Catalog=reservation;Integrated Security=True;";
+            var connection = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
 
             services.AddTransient<IShopNetwork, ShopNetwork>();

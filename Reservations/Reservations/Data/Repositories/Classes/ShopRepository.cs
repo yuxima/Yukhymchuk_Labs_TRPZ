@@ -1,42 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Reservations.BussinessLogic;
 using Reservations.Data.Entities;
+using Reservations.Data.Repositories.Classes;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Reservations.Data.Repositories
 {
-    class ShopRepository : IShopRepository
+    class ShopRepository :Repository<ShopEntity, int>, IShopRepository
     {
-        private DbSet<ShopEntity> _context;
         public ShopRepository(ApplicationContext context)
+            :base(context)
         {
-            _context = context.Set<ShopEntity>();
         }
-        public void DeleteById(int Id)
-        {
-            ShopEntity shop = _context.Find(Id);
-            _context.Remove(shop);
-        }
-
-        public IEnumerable<ShopEntity> GetAll()
-        {
-            return _context.AsNoTracking();
-        }
-
-        public ShopEntity GetById(int Id)
-        {
-            return _context.Find(Id);
-        }
-
-        public void Insert(ShopEntity entity)
-        {
-            _context.Add(entity);
-        }
-
-        public void Update(ShopEntity entity)
-        {
-            _context.Update(entity);
-        }
+        
     }
 }

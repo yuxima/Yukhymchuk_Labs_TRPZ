@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Reservations.Data;
+using System.Configuration;
 
 namespace Reservations
 {
@@ -9,7 +10,8 @@ namespace Reservations
         ApplicationContext IDesignTimeDbContextFactory<ApplicationContext>.CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
-            optionsBuilder.UseSqlServer(@"data source=(localdb)\MSSQLLocalDB;Initial Catalog=reservation;Integrated Security=True;");
+            var connection = ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString;
+            optionsBuilder.UseSqlServer(connection);
             return new ApplicationContext(optionsBuilder.Options);
         }
     }

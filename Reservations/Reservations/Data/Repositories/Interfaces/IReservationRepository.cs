@@ -7,10 +7,6 @@ namespace Reservations.Data.Repositories
 {
     interface IReservationRepository: IRepository<ReservationEntity, int>
     {
-        IEnumerable<ReservationEntity> GetAll();
-        void Insert(ReservationEntity model);
-        void Update(ReservationEntity model);
-        ReservationEntity GetById(int Id);
-        void DeleteById(int Id);
+        
     }
 }
