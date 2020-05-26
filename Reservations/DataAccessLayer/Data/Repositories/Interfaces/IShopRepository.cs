@@ -1,11 +1,11 @@
-﻿using Reservations.Data.Entities;
+﻿using DataAccessLayer.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data.Repositories
+namespace DataAccessLayer.Data.Repositories.Interfaces
 {
-    interface IShopRepository : IRepository<ShopEntity, int>
+    public interface IShopRepository : IRepository<ShopEntity, int>
     {
     }
 }

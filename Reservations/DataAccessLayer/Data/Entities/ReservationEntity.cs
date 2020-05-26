@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data.Entities
+namespace DataAccessLayer.Data.Entities
 {
-    class ReservationEntity : IEntity<int>
+    public class ReservationEntity : IEntity<int>
     {
         public int Id { get; set; }
         public ProductEntity Product { get; set; }

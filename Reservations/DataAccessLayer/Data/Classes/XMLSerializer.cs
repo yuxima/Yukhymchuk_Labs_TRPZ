@@ -4,8 +4,9 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Configuration;
 using System.Text;
+using DataAccessLayer.Data.Interfaces;
 
-namespace Reservations.Data
+namespace DataAccessLayer.Data.Classes
 {
     class XMLSerializer<T>:ISerializer<T>
     {

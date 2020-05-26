@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DataAccessLayer.Data.Classes;
+using DataAccessLayer.Data.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data.Repositories.Classes
+namespace DataAccessLayer.Data.Repositories.Classes
 {
     class Repository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity:class
     {

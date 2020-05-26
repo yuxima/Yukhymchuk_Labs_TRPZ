@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
+using DataAccessLayer.Data.Interfaces;
 
-namespace Reservations.Data
+namespace DataAccessLayer.Data.Classes
 {
-    class DataController<T>:IDataController<T>
+    public class DataController<T>:IDataController<T>
     {
         ISerializer<T> serializer;
         public DataController(ISerializer<T> serializer)

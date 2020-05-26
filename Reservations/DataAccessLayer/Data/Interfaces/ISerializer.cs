@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data
+namespace DataAccessLayer.Data.Interfaces
 {
-    interface ISerializer<T>
+    public interface ISerializer<T>
     {
         void Serialize(T obj, string path);
         T Deserialize(string path);

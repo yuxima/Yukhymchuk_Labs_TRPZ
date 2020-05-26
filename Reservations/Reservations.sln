@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reservations", "Reservations\Reservations.csproj", "{E641088B-8E0A-40DA-A16A-800FD3C0FC09}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4E56DB2-A493-42B9-8FF5-8D520EC18847} = {C4E56DB2-A493-42B9-8FF5-8D520EC18847}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{F5558309-B16E-4E57-A7CE-B4B2B3C921ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{F5558309-B16E-4E57-A7CE-B4B2B3C921ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{C4E56DB2-A493-42B9-8FF5-8D520EC18847}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{C4E56DB2-A493-42B9-8FF5-8D520EC18847}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F5558309-B16E-4E57-A7CE-B4B2B3C921ED} = {F5558309-B16E-4E57-A7CE-B4B2B3C921ED}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

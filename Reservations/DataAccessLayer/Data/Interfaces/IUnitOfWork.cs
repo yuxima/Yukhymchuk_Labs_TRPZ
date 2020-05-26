@@ -1,16 +1,16 @@
-﻿using Reservations.Data.Repositories;
+﻿using DataAccessLayer.Data.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data
+namespace DataAccessLayer.Data.Interfaces
 {
-    interface IUnitOfWork
+     public interface IUnitOfWork
     {
         void Commit();
-        IProductRepository ProductRepository { get; }
-        IProductInShopRepository ProductInShopRepository { get; }
-        IShopRepository ShopRepository { get; }
-        IReservationRepository ReservationRepository { get; }
+        public IProductRepository ProductRepository { get; }
+        public IProductInShopRepository ProductInShopRepository { get; }
+        public IShopRepository ShopRepository { get; }
+        public IReservationRepository ReservationRepository { get; }
     }
 }

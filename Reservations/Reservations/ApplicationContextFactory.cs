@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DataAccessLayer.Data.Classes;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Reservations.Data;
 using System.Configuration;
 
 namespace Reservations

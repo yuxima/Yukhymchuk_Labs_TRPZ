@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Reservations.Data.Entities;
-using Reservations.Data.Repositories.Classes;
+﻿using DataAccessLayer.Data.Classes;
+using DataAccessLayer.Data.Entities;
+using DataAccessLayer.Data.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace Reservations.Data.Repositories
+namespace DataAccessLayer.Data.Repositories.Classes
 {
     class ProductInShopRepository : Repository<ProductInShopEntity, int>,IProductInShopRepository
     {

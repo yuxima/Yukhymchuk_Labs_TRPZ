@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data.Repositories
+namespace DataAccessLayer.Data.Repositories.Interfaces
 {
-    interface IRepository<TEntity,TKey>
+    public interface IRepository<TEntity,TKey>
     {
         IEnumerable<TEntity> GetAll();
         void Insert(TEntity model);

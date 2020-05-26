@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Reservations.BussinessLogic;
-using Reservations.Data.Entities;
-using Reservations.Data.Repositories.Classes;
+using DataAccessLayer.Data.Classes;
+using DataAccessLayer.Data.Entities;
+using DataAccessLayer.Data.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data.Repositories
+namespace DataAccessLayer.Data.Repositories.Classes
 {
     class ShopRepository :Repository<ShopEntity, int>, IShopRepository
     {

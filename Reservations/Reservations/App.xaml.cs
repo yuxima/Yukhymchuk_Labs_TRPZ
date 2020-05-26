@@ -6,13 +6,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
-using Reservations.BussinessLogic;
-using Reservations.Data;
 using Reservations.User_Interface;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
-using Reservations.BussinessLogic.Interfaces;
-using Reservations.BussinessLogic.Services;
+using BusinessLogic;
+using DataAccessLayer.Data.Classes;
+using DataAccessLayer.Data.Interfaces;
+using BusinessLogic.Services;
+using BusinessLogic.Interfaces;
+using BusinessLogic.Classes;
 
 namespace Reservations
 {

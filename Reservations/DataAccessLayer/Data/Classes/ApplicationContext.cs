@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Reservations.Data.Entities;
+﻿using DataAccessLayer.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data
+namespace DataAccessLayer.Data.Classes
 {
-    class ApplicationContext:DbContext
+    public class ApplicationContext:DbContext
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
              : base(options)

@@ -1,11 +1,13 @@
-﻿using Reservations.Data.Repositories;
+﻿using DataAccessLayer.Data.Interfaces;
+using DataAccessLayer.Data.Repositories.Classes;
+using DataAccessLayer.Data.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data
+namespace DataAccessLayer.Data.Classes
 {
-    class UnitOfWork:IUnitOfWork
+    public class UnitOfWork:IUnitOfWork
     {
         private readonly ApplicationContext context;
         private IProductRepository productRepository;

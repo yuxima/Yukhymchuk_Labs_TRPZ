@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reservations.Data.Entities
+namespace DataAccessLayer.Data.Entities
 {
     public interface IEntity<TKey>
     {

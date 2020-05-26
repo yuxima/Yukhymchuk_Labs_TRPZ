@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Reservations.Migrations
+namespace DataAccessLayer.Data.Migrations
 {
     public partial class reservation : Migration
     {
