@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using BusinessLogic.Interfaces;
+using BusinessLogic.Abstract;
 using BusinessLogic.Models;
-using DataAccessLayer.Data.Entities;
-using DataAccessLayer.Data.Interfaces;
+using DataAccessLayer.Abstract;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BusinessLogic.Services
+namespace BusinessLogic.Implementation.Services
 {
     public class ReservationService:IReservationService
     {

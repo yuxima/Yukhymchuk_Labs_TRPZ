@@ -1,5 +1,5 @@
 ﻿
-using BusinessLogic.Interfaces;
+using BusinessLogic.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
-using DataAccessLayer.Data.Interfaces;
+using DataAccessLayer.Abstract;
 
-namespace DataAccessLayer.Data.Classes
+namespace DataAccessLayer.Implementation.Data.Classes
 {
     public class DataController<T>:IDataController<T>
     {

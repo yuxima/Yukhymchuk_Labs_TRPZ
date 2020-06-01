@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccessLayer.Data.Entities
+namespace Entities
 {
     public interface IEntity<TKey>
     {

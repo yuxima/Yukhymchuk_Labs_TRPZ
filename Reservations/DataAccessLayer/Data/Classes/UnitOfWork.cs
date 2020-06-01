@@ -1,11 +1,10 @@
-﻿using DataAccessLayer.Data.Interfaces;
-using DataAccessLayer.Data.Repositories.Classes;
-using DataAccessLayer.Data.Repositories.Interfaces;
+﻿using DataAccessLayer.Abstract;
+using DataAccessLayer.Implementation.Data.Repositories.Classes;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccessLayer.Data.Classes
+namespace DataAccessLayer.Implementation.Data.Classes
 {
     public class UnitOfWork:IUnitOfWork
     {

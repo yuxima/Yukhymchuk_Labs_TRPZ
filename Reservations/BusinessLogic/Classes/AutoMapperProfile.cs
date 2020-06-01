@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using BusinessLogic.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using DataAccessLayer.Data.Entities;
+using Entities;
+using BusinessLogic.Models;
 
-namespace BusinessLogic.Classes
+namespace BusinessLogic.Implementation.Classes
 {
     public class AutoMapperProfile:Profile
     {

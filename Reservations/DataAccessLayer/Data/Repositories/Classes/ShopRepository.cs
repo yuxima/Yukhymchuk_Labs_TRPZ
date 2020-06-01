@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using DataAccessLayer.Data.Classes;
-using DataAccessLayer.Data.Entities;
-using DataAccessLayer.Data.Repositories.Interfaces;
+using Entities;
+using DataAccessLayer.Implementation.Data.Classes;
+using DataAccessLayer.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccessLayer.Data.Repositories.Classes
+namespace DataAccessLayer.Implementation.Data.Repositories.Classes
 {
     class ShopRepository :Repository<ShopEntity, int>, IShopRepository
     {

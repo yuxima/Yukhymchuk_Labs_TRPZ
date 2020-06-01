@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using BusinessLogic.Interfaces;
+using BusinessLogic.Abstract;
 using BusinessLogic.Models;
-using DataAccessLayer.Data.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DataAccessLayer.Abstract;
 
-namespace BusinessLogic.Services
+namespace BusinessLogic.Implementation.Services
 {
     public class ProductInShopService:IProductInShopService
     {

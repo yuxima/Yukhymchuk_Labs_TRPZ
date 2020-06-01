@@ -4,9 +4,9 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Configuration;
 using System.Text;
-using DataAccessLayer.Data.Interfaces;
+using DataAccessLayer.Abstract;
 
-namespace DataAccessLayer.Data.Classes
+namespace DataAccessLayer.Implementation.Data.Classes
 {
     class XMLSerializer<T>:ISerializer<T>
     {

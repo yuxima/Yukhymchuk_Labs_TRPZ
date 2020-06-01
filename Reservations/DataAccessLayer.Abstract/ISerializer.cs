@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccessLayer.Data.Interfaces
+namespace DataAccessLayer.Abstract
 {
     public interface ISerializer<T>
     {

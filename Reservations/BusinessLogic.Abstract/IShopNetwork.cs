@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BusinessLogic.Interfaces
+namespace BusinessLogic.Abstract
 {
     public interface IShopNetwork
     {

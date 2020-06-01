@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using BusinessLogic.Interfaces;
+using BusinessLogic.Abstract;
 using BusinessLogic.Models;
-using DataAccessLayer.Data.Interfaces;
+using DataAccessLayer.Abstract;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BusinessLogic.Services
+namespace BusinessLogic.Implementation.Services
 {   public class ShopService : IShopService
     {
         private IUnitOfWork _unitOfWork;

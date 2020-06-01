@@ -4,16 +4,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reservations", "Reservations\Reservations.csproj", "{E641088B-8E0A-40DA-A16A-800FD3C0FC09}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C4E56DB2-A493-42B9-8FF5-8D520EC18847} = {C4E56DB2-A493-42B9-8FF5-8D520EC18847}
-	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{F5558309-B16E-4E57-A7CE-B4B2B3C921ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer.Implementation", "DataAccessLayer\DataAccessLayer.Implementation.csproj", "{F5558309-B16E-4E57-A7CE-B4B2B3C921ED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{C4E56DB2-A493-42B9-8FF5-8D520EC18847}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F5558309-B16E-4E57-A7CE-B4B2B3C921ED} = {F5558309-B16E-4E57-A7CE-B4B2B3C921ED}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic.Implementation", "BusinessLogic\BusinessLogic.Implementation.csproj", "{C4E56DB2-A493-42B9-8FF5-8D520EC18847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.Abstract", "BusinessLogic.Abstract\BusinessLogic.Abstract.csproj", "{B8C9F5DE-075C-4CA9-8B95-2EB5B6492A93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{57B27105-DF2E-47FB-A5DF-78AD0F4C4B69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer.Abstract", "DataAccessLayer.Abstract\DataAccessLayer.Abstract.csproj", "{F7FE8FD9-8121-4624-8643-6EAE9D2714DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{6980DF2F-3253-4EF4-8B2A-305C2F5947D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,22 @@ Global
 		{C4E56DB2-A493-42B9-8FF5-8D520EC18847}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4E56DB2-A493-42B9-8FF5-8D520EC18847}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4E56DB2-A493-42B9-8FF5-8D520EC18847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C9F5DE-075C-4CA9-8B95-2EB5B6492A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C9F5DE-075C-4CA9-8B95-2EB5B6492A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C9F5DE-075C-4CA9-8B95-2EB5B6492A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C9F5DE-075C-4CA9-8B95-2EB5B6492A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B27105-DF2E-47FB-A5DF-78AD0F4C4B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B27105-DF2E-47FB-A5DF-78AD0F4C4B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B27105-DF2E-47FB-A5DF-78AD0F4C4B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B27105-DF2E-47FB-A5DF-78AD0F4C4B69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FE8FD9-8121-4624-8643-6EAE9D2714DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FE8FD9-8121-4624-8643-6EAE9D2714DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FE8FD9-8121-4624-8643-6EAE9D2714DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FE8FD9-8121-4624-8643-6EAE9D2714DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6980DF2F-3253-4EF4-8B2A-305C2F5947D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6980DF2F-3253-4EF4-8B2A-305C2F5947D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6980DF2F-3253-4EF4-8B2A-305C2F5947D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6980DF2F-3253-4EF4-8B2A-305C2F5947D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

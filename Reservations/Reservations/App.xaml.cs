@@ -9,12 +9,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Reservations.User_Interface;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
-using BusinessLogic;
-using DataAccessLayer.Data.Classes;
-using DataAccessLayer.Data.Interfaces;
-using BusinessLogic.Services;
-using BusinessLogic.Interfaces;
-using BusinessLogic.Classes;
+using BusinessLogic.Abstract;
+using DataAccessLayer.Abstract;
+using BusinessLogic.Implementation.Classes;
+using BusinessLogic.Implementation.Services;
+using BusinessLogic.Implementation;
+using DataAccessLayer.Implementation.Data.Classes;
+
 
 namespace Reservations
 {

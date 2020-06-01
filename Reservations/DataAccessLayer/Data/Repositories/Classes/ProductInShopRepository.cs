@@ -1,10 +1,10 @@
-﻿using DataAccessLayer.Data.Classes;
-using DataAccessLayer.Data.Entities;
-using DataAccessLayer.Data.Repositories.Interfaces;
+﻿using Entities;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Implementation.Data.Classes;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace DataAccessLayer.Data.Repositories.Classes
+namespace DataAccessLayer.Implementation.Data.Repositories.Classes
 {
     class ProductInShopRepository : Repository<ProductInShopEntity, int>,IProductInShopRepository
     {

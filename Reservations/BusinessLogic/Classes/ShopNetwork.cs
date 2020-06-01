@@ -1,11 +1,12 @@
-﻿using BusinessLogic.Interfaces;
+﻿
+using BusinessLogic.Abstract;
 using BusinessLogic.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BusinessLogic.Classes
+namespace BusinessLogic.Implementation.Classes
 {
     public class ShopNetwork:IShopNetwork
     {

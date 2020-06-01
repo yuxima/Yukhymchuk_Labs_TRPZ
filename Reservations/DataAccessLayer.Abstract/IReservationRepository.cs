@@ -1,9 +1,9 @@
-﻿using DataAccessLayer.Data.Entities;
+﻿using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccessLayer.Data.Repositories.Interfaces
+namespace DataAccessLayer.Abstract
 {
     public interface IReservationRepository: IRepository<ReservationEntity, int>
     {

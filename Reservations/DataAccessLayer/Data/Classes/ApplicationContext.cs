@@ -1,10 +1,11 @@
-﻿using DataAccessLayer.Data.Entities;
+﻿
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Entities;
 
-namespace DataAccessLayer.Data.Classes
+namespace DataAccessLayer.Implementation.Data.Classes
 {
     public class ApplicationContext:DbContext
     {

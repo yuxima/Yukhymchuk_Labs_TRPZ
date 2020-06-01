@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccessLayer.Data.Repositories.Interfaces
+namespace DataAccessLayer.Abstract
 {
     public interface IRepository<TEntity,TKey>
     {

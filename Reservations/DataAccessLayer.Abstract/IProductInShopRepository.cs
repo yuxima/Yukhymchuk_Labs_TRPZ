@@ -1,9 +1,9 @@
-﻿using DataAccessLayer.Data.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Entities;
 
-namespace DataAccessLayer.Data.Repositories.Interfaces
+namespace DataAccessLayer.Abstract
 {
     public interface IProductInShopRepository:IRepository<ProductInShopEntity, int>
     {

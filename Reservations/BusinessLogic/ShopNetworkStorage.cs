@@ -1,9 +1,8 @@
-﻿using BusinessLogic.Models;
-using System;
+﻿
+using BusinessLogic.Models;
 using System.Collections.Generic;
-using System.Text;
 
-namespace BusinessLogic
+namespace BusinessLogic.Implementation
 {
     public static class ShopNetworkStorage
     {
